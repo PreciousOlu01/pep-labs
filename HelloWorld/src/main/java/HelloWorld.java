@@ -6,11 +6,11 @@ public class HelloWorld {
      * You can use the test results to check for differences.
      * @return "Hello, world!"
      */
-    public static String sayHello(){
+    public String sayHello(){
         return "Hello, world!";
     }
     public static void main(String[] args){
-        String s= sayHello();
-        System.out.println(s);
+        HelloWorld s= new HelloWorld();
+        System.out.println(s.sayHello());
     }
 }
