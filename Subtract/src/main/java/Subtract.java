@@ -15,6 +15,10 @@ public class Subtract {
      * @return a minus b
      */
     public double sub(double a, double b){
-        return 0;
+        return a - b;
+    }
+    public static void main(String[] args){
+        Subtract subtraction = new Subtract();
+        System.out.println(subtraction.sub(5, 3));
     }
 }
