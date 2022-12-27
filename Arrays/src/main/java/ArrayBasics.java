@@ -54,12 +54,13 @@ public class ArrayBasics {
         int len= arr.length;
         int[] newArray= new int[len+1];
         int j=0;
-        for(int i=0; i<newArray.length-1; i++){
-            if(n==arr[i]){
-                newArray[j]=val;
+        for(int i=0; i<newArray.length; i++){
+            if(i==n){
+                
+                newArray[i]=val;
             }
             else{
-                newArray[j]=arr[i];
+                newArray[i]=arr[j];
                 j++;
             }    
         }
@@ -79,9 +80,9 @@ public class ArrayBasics {
     public static void main(String[] args){
         ArrayBasics arrays = new ArrayBasics();
 
-        int[] arr= {2,4,6};
-        int indexNum=2;
-        int val = 8;
+        int[] arr= {1,2,3};
+        int indexNum=1;
+        int val = 5;
 
         int result = arrays.getLengthOfArray(arr);
         int results = arrays.getNthElementOfArray(arr, indexNum);
