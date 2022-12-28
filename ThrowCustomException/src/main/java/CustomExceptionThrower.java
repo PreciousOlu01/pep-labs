@@ -1,3 +1,5 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 public class CustomExceptionThrower {
 
@@ -8,8 +10,16 @@ public class CustomExceptionThrower {
      *
      * I recommend looking at the test case for a good example of try/catch block usage, as well.
      */
-    public void throwCustomException(){
+    public void throwCustomException() throws CustomException{
+        FileInputStream file = null;
+       
 
+        try{
+                file = new FileInputStream("C:\\Users\\Documents");
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+           throw new CustomException("this file does not exist", e);
+        }
     }
 
 }
