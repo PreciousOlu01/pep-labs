@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class SetAllArrayElements {
     /**
@@ -23,6 +24,18 @@ public class SetAllArrayElements {
      * @return nothing, because of pass-by-reference, all changes will be reflected in the original array.
      */
     public void set(int[] arr, int n){
+        for(int i=0; i<arr.length; i++){
+            arr[i]= n;
+            System.out.println(arr);
+        }
+        
+    
+    }
 
+    public static void main(String[] args) {
+        SetAllArrayElements arr= new SetAllArrayElements();
+
+        int[] newArr = {3,5,5,3,4};
+        arr.set(newArr, 4);
     }
 }
