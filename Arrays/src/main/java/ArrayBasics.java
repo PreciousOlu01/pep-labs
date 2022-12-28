@@ -15,13 +15,8 @@ public class ArrayBasics {
      * @param arr the array we're getting data from.
      * @return the length of arr.
      */
-    int count=0;
     public int getLengthOfArray(int[] arr){
-        int arrLength=arr.length;
-        for(int i=0; i<arrLength; i++){
-            count++;
-        }
-        return count;
+        return arr.length;
     }
 
 
@@ -52,19 +47,17 @@ public class ArrayBasics {
      */
     public void setNthElementOfArray(int[] arr, int n, int val){
         int len= arr.length;
-        int[] newArray= new int[len+1];
+        int[] newArray= new int[len];
         int j=0;
         for(int i=0; i<newArray.length; i++){
-            if(i==n){
-                
-                newArray[i]=val;
+            if(i==n){     
+                newArray[n]=val;
             }
             else{
                 newArray[i]=arr[j];
                 j++;
             }    
         }
-        newArray[n]=val;
         System.out.println(Arrays.toString(newArray));
     }
 
@@ -74,6 +67,9 @@ public class ArrayBasics {
      */
     public int[] returnNewArraySizeN(int n){
         int[] arrSize = new int[n];
+        for(int i=0; i<n; i++){
+            arrSize[i]=i;
+        }
         return arrSize;
     }
 
@@ -81,15 +77,12 @@ public class ArrayBasics {
         ArrayBasics arrays = new ArrayBasics();
 
         int[] arr= {1,2,3};
-        int indexNum=1;
-        int val = 5;
-
-        int result = arrays.getLengthOfArray(arr);
-        int results = arrays.getNthElementOfArray(arr, indexNum);
+        int indexNum=2;
+        int val = 7;        
+        
+    
         arrays.setNthElementOfArray(arr, indexNum, val);
-
-        System.out.println(result);
-        System.out.println(results);
+        
         
     }
 }
