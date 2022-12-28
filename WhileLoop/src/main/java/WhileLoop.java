@@ -45,8 +45,8 @@ public class WhileLoop {
         System.out.println("The number of times looped "+i);
         return sum;
     }
-    public static void main(String[] arg){
-        WhileLoop looping = new WhileLoop();
-        System.out.println(looping.whileExample(6));
-    }
+    // public static void main(String[] arg){
+    //     WhileLoop looping = new WhileLoop();
+    //     System.out.println(looping.whileExample(6));
+    // }
 }
