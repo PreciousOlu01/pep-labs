@@ -1,4 +1,4 @@
-
+import java.rmi.StubNotFoundException;
 
 public class ForLoop {
     /**
@@ -41,9 +41,15 @@ public class ForLoop {
      */
     public String returnNumbers(int start, int end){
         String buildingString = "";
-
-//        code here
-
+        for(int i=start; i<end; i++){
+            buildingString = buildingString + i + " ";
+        }
         return buildingString;
+    }
+
+    public static void main(String[] args){
+        ForLoop looping= new ForLoop();
+
+        System.out.println(looping.returnNumbers(1, 6));
     }
 }
