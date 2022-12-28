@@ -36,8 +36,17 @@ public class WhileLoop {
         int sum = 0;
         int i = 0;
 
-//        code here
-
+        while(i<end){
+            sum= sum + i;
+            i++;
+            System.out.print("The sum is "+sum);
+            System.out.println();
+        }
+        System.out.println("The number of times looped "+i);
         return sum;
+    }
+    public static void main(String[] arg){
+        WhileLoop looping = new WhileLoop();
+        System.out.println(looping.whileExample(6));
     }
 }
