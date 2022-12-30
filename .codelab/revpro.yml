@@ -518,6 +518,7 @@
     :tests:
       problem1GetAllSmiths: 1
       problem2SalaryGreaterThan: 1
+      problem1Test: 0
   Update:
     :Week: 4
     :Order: 9
