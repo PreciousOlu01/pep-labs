@@ -1,5 +1,7 @@
 package com.revature;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import io.javalin.Javalin;
 
 /**
@@ -17,7 +19,21 @@ public class JavalinSingleton {
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
         app.post("/problem1", ctx -> {
-                //implement logic here
+                String jsonString= ctx.body();
+                ObjectMapper objMap = new ObjectMapper();
+                Song problem1 = objMap.readValue(jsonString, Song.class);
+                // ctx.contentType("application/Json");
+                
+                String backToString=objMap.writeValueAsString(problem1);
+
+                // problem1.getArtistName();
+
+                ctx.result(backToString);
+
+                
+
+               
+                
         });
 
         /**
@@ -28,7 +44,17 @@ public class JavalinSingleton {
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
         app.post("/problem2", ctx -> {
-               //implement logic here
+            String jsonString2= ctx.body();
+            ObjectMapper objMap2 = new ObjectMapper();
+            Song problem2 = objMap2.readValue(jsonString2, Song.class);
+
+            ctx.contentType("application/Json");
+
+            problem2.setArtistName("Beatles");
+
+            String convertString = objMap2.writeValueAsString(problem2);
+
+            ctx.result(convertString);
         });
 
 
