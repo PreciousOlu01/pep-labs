@@ -24,11 +24,11 @@ public class JavalinSingleton {
                 Song problem1 = objMap.readValue(jsonString, Song.class);
                 // ctx.contentType("application/Json");
                 
-                String backToString=objMap.writeValueAsString(problem1);
+                // String backToString=objMap.writeValueAsString(problem1);
 
-                // problem1.getArtistName();
+                String getProblem1= problem1.getArtistName();
 
-                ctx.result(backToString);
+                ctx.result(getProblem1);
 
                 
 
