@@ -1,1 +1,1 @@
-CREATE TABLE post(id SERIAL PRIMARY KEY, post varchar(255), user_fk int REFERENCES user(id)VALUES('post1',12));
+CREATE TABLE post(id SERIAL PRIMARY KEY, post varchar(255), user_fk int REFERENCES site_user(id));
