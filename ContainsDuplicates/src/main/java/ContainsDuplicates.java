@@ -12,11 +12,21 @@ public class ContainsDuplicates {
      * @return true if nums contains any duplicate values, false if it does not.
      */
     public boolean containsDuplicate(int[] nums){
-        List list = Arrays.asList(nums);
-        Set set = new HashSet(list);
-        if(set.size()<list.size()){
-            return true;
+        Integer[] arrays= new Integer[nums.length];
+        for(int i=0; i<nums.length; i++){
+            arrays[i] = Integer.valueOf(nums[i]);
         }
-        return false;
+        Set<Integer>newSet= new HashSet<Integer>(Arrays.asList(arrays));
+        if(newSet.size()==arrays.length){
+            return false;
+        }
+        return true;
+    }
+
+    public static void main(String[] args){
+        ContainsDuplicates obj = new ContainsDuplicates();
+        int[] arr={2,4,6,1};
+
+        System.out.println(obj.containsDuplicate(arr));
     }
 }
