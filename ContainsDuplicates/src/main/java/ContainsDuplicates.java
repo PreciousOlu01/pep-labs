@@ -1,4 +1,8 @@
-
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class ContainsDuplicates {
     /**
@@ -8,6 +12,11 @@ public class ContainsDuplicates {
      * @return true if nums contains any duplicate values, false if it does not.
      */
     public boolean containsDuplicate(int[] nums){
+        List list = Arrays.asList(nums);
+        Set set = new HashSet(list);
+        if(set.size()<list.size()){
+            return true;
+        }
         return false;
     }
 }
