@@ -27,6 +27,19 @@ public class Pyramid {
      * @return a string representation of the pyramid.
      */
     public String returnPyramid(int n){
+        for(int i=0; i<n; i++){
+            for(int j=0; j<=i; j++){
+                System.out.print('*');
+            }
+            System.out.println();
+        }
         return "";
+    }
+
+    public static void main(String[] args){
+        Pyramid obj= new Pyramid();
+        int x= 5;
+
+        System.out.println(obj.returnPyramid(x));
     }
 }
