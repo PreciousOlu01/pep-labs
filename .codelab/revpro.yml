@@ -1,7 +1,7 @@
 ---
 :lab_name: pep-labs
 :repo_path: "/workspace/revpro-cli/pep-labs"
-:previous_lab: 
+:previous_lab: Library
 :current_lab: Library
 :origin_remote: https://github.com/PreciousOlu01/pep-labs.git
 :repo_clone_folder: "/workspace/revpro-cli/pep-labs"
@@ -42,10 +42,10 @@
   :count_labs_total: 96
   :count_labs_passed: 0
   :count_tests_total: 361
-  :count_tests_passed: 6
+  :count_tests_passed: 11
 :progress_test:
   :count_tests_total: 361
-  :count_tests_passed: 6
+  :count_tests_passed: 11
   Start:
     :Week: 1
     :Order: 1
@@ -816,16 +816,16 @@
     :Order: 9
     :Type: project
     :count_tests: 13
-    :count_tests_passed: 6
+    :count_tests_passed: 11
     :tests:
-      getAllAuthorsDAOTest: 0
-      insertAuthorCheckWithGetAllTest: 0
+      getAllAuthorsDAOTest: 1
+      insertAuthorCheckWithGetAllTest: 1
       getAllAuthorsServiceTest: 1
       addAuthorTest: 1
       getAllBooksTest: 1
-      getBookByIsbnTest: 0
-      insertBookCheckWithGetAllTest: 0
-      insertBookCheckWithGetByIdTest: 0
+      getBookByIsbnTest: 1
+      insertBookCheckWithGetAllTest: 1
+      insertBookCheckWithGetByIdTest: 1
       getBooksWithBookCountOverZeroTest: 0
       getAllBooksTest1: 1
       addBookVerifyNotNullOnSuccessfulAddTest: 1
