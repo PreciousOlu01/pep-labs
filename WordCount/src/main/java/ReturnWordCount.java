@@ -1,3 +1,4 @@
+import java.util.StringTokenizer;
 
 public class ReturnWordCount {
     /**
@@ -5,6 +6,8 @@ public class ReturnWordCount {
      * @return return the amount of words in a string.
      */
     public int count(String in){
-        return 0;
+        StringTokenizer token = new StringTokenizer(in);
+
+        return token.countTokens();
     }
 }
