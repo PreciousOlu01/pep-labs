@@ -55,10 +55,35 @@ public class SampleClass {
     public int a;
     public boolean b;
 
+    SampleClass(){}
+    SampleClass(int a, boolean b){
+        this.a= a;
+        this.b=b;
+    }
+
     //    implement a custom .equals(SampleClass other){} method here.
+    public boolean equal(Object others){
+        if(this == others){
+            return true;
+        }
+
+        //check if obj(others) is null and not an instance of CustomMethod class(object) and return false
+        if(others==null || others.getClass()!= this.getClass()){
+            return false;
+        }
+
+        //type cast others to customMethod to be able to compare data members
+        SampleClass customMethod= (SampleClass) others;
+
+        //compare the data members and compare accordingly
+        return (customMethod.a == this.a && customMethod.b==this.b );
+    }
 
 
     //    implement a custom .toString(){} method here.
 
-    
+    public void toStrings(){
+        System.out.println(this.a);
+        System.out.println(this.b);
+    }
 }
