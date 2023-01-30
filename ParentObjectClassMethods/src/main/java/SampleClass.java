@@ -62,7 +62,7 @@ public class SampleClass {
     }
 
     //    implement a custom .equals(SampleClass other){} method here.
-    public boolean equal(Object others){
+    public boolean equals(Object others){
         if(this == others){
             return true;
         }
@@ -82,8 +82,7 @@ public class SampleClass {
 
     //    implement a custom .toString(){} method here.
 
-    public void toStrings(){
-        System.out.println(this.a);
-        System.out.println(this.b);
+    public String toString(){
+        return a + " "+ b;
     }
 }
